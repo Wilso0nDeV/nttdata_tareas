@@ -1,4 +1,5 @@
 import { createAction, props } from "@ngrx/store";
+import { Tarea } from "../../models";
 
 
 export const crearTarea = createAction(
@@ -15,3 +16,4 @@ export const deletedTarea = createAction(
     '[Tarea] Eliminar tarea',
     props<{id : string} >()
 );
+

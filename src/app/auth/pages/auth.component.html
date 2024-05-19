@@ -56,7 +56,10 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary w-100">
+      <button *ngIf="isLogin" class="btn btn-primary w-100" [disabled]="isLogin">
+        <i class="fa fa-spin fa-sync"></i> Iniciando...
+      </button>
+      <button type="submit" class="btn btn-primary w-100" *ngIf="!isLogin">
         Iniciar Sesión
       </button>
     </form>

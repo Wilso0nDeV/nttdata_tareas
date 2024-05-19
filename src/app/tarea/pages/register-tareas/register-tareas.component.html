@@ -29,13 +29,14 @@
       <div *ngIf="formTarea.get('description')?.hasError('required')">
         La tarea es requerida
       </div>
+      
       <div *ngIf="formTarea.get('description')?.hasError('pattern')">
         Escriba solo letras y números
       </div>
     </div>
     </div>
   </form>
-  <app-alert-validate *ngIf="validateMessage" [message]="menssage" [error]="false"></app-alert-validate>
+  <app-alert-validate *ngIf="validateMessage" [message]="menssage" [error]="isTarea"></app-alert-validate>
 
   <app-listar-tareas></app-listar-tareas>
 </div>

@@ -30,6 +30,7 @@ export const _tareaReducer = createReducer(
     return state.filter(tarea => tarea.id !== id)
   }),
 
+  
 )
 
 export const tareaReducer = (state: any, action: any) =>{
